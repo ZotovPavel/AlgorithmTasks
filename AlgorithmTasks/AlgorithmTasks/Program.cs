@@ -8,21 +8,20 @@ namespace AlgorithmTasks
 {
     class Program
     {     
-        static List<int> GetCombinations(int k, int n)
+        static List<List<int>> GetCombinations(int k, int n)
         {
-            var array = GetArrayFilledWithDigits();
-            return null;
-        }
+            var digitsArray = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9};
+            var mask = new int[10];
 
-        static int[] GetArrayFilledWithDigits()
-        {
-            int[] array = new int[9];
-            for (int i = 0; i < 9; i++)
+            var combinationsList = new List<List<int>>();
+
+            while(true)
             {
-                array[i] = i+1;
+                var newCombination = new List<int>();
+
             }
 
-            return array;
+            return combinationsList;
         }
 
         static void PrintArray(int[] array)
@@ -35,6 +34,7 @@ namespace AlgorithmTasks
 
             Console.WriteLine();
         }
+
         static void Main(string[] args)
         {
             Console.Write("k=");
@@ -44,9 +44,6 @@ namespace AlgorithmTasks
             Console.Write("n=");
             int n = int.Parse(Console.ReadLine());
             Console.WriteLine();
-
-            var array = GetArrayFilledWithDigits();
-            PrintArray(array);
 
             //var result = GetCombinations(k, n);
 
